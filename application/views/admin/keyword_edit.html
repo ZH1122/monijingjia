@@ -1,0 +1,20 @@
+<div class="col-lg-2"></div>
+<div class="col-lg-8">
+<form action="<?php echo base_url().'index.php/admin/keyword/update';?>" method="post">
+<div class="form-group">
+	<input name="id" id="id" type="hidden" value="<?php echo $kw['kw_id']?>"> 
+	<label for="name">关键词名称</label>
+	<input name="name" id="name" value="<?php echo $kw['kw_name']?>" class="form-control" />
+	</div>
+	<br /> 
+	<div class="form-group">
+	<label for="ranking">关键词ranking</label>
+	<input name="ranking" id="ranking" value="<?php echo $kw['kw_ranking']?>" class="form-control" />
+	</div>
+	<div class="form-group">
+	<button type="reset" class="btn">重置</button>
+	<button type="submit" class="btn">提交</button>
+	</div>
+</form>
+</div>
+<div class="col-lg-2"></div>

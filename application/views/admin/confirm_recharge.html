@@ -1,0 +1,34 @@
+<div class="col-lg-2"></div>
+<div class="col-lg-8">
+<table class="table">
+	<thead>
+		<th>id</th>
+		<th>用户名</th>
+		<th>充值金额</th>
+		<th>充值日期</th>
+		<th>充值状态</th>
+		<th>审批</th>
+	</thead>
+	<?php foreach($lists as $list) : ?>
+	<tr>
+		<td>
+			<?php echo $list['recharge_id'];?>
+		</td>
+		<td>
+			<?php echo $list['user_id'];?>
+		</td>
+		<td>
+			<?php echo $list['recharge_money'];?>
+		</td>
+		<td>
+			<?php echo $list['recharge_date'];?>
+		</td>
+		<td>
+			<?php echo $list['recharge_status'];?>
+		</td>
+		<td><a href="<?php echo base_url().'index.php/admin/recharge/confirm/'.$list['recharge_id'];?>">通过</a>/<a href="<?php echo base_url().'index.php/admin/recharge/deny/'.$list['recharge_id'];?>">拒绝</a></td>
+	</tr>
+	<?php endforeach; ?>
+</table>
+</div>
+<div class="col-lg-2"></div>

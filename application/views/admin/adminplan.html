@@ -1,0 +1,54 @@
+<div class="col-lg-2"></div>
+<div class="col-lg-8">
+<table class="table">
+	<thead>
+		<th>计划id</th>
+		<th>用户id</th>
+		<th>计划名称</th>
+		<th>计划状态</th>
+		<th>计划消费</th>
+		<th>计划价钱</th>
+		<th>计划预算</th>
+		<th>批复</th>
+		<th>计划详情</th>
+	</thead>
+	<?php foreach($lists as $list) : ?>
+	<tr>
+		<?php 
+			switch($list['plan_state']){
+				case 1: $list['plan_state']="有效";break;
+				case 2: $list['plan_state']="暂停推广";break;
+				case 3: $list['plan_state']="审核中";break;
+				case 4: $list['plan_state']="失效";break;}
+			?>
+		<td>
+			<?php echo $list['plan_id'];?>
+		</td>
+		<td>
+			<?php echo $list['user_id'];?>
+		</td>
+		<td>
+			<?php echo $list['plan_name'];?>
+		</td>
+		<td>
+			<?php echo $list['plan_state'];?>
+		</td>
+		<td>
+			<?php echo $list['plan_consume'];?>
+		</td>
+		<td>
+			<?php echo $list['plan_price'];?>
+		</td>
+		<td>
+			<?php echo $list['plan_budget'];?>
+		</td>
+		<td><a
+			href="<?php echo base_url().'index.php/admin/adminplan/confirm/'.$list['plan_id'];?>">通过</a>/<a
+			href="<?php echo base_url().'index.php/admin/adminplan/deny/'.$list['plan_id'];?>">拒绝</a></td>
+		<td><a
+			href="<?php echo base_url().'index.php/admin/adminplan/showPlan/'.$list['plan_id'];?>">查看计划详情</a></td>
+	</tr>
+	<?php endforeach;?>
+</table>
+</div>
+<div class="col-lg-2"></div>

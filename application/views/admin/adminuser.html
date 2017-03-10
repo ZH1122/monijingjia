@@ -1,0 +1,35 @@
+<div class="col-lg-2"></div>
+<div class="col-lg-8">
+<table class="table">
+	<thead>
+		<th>用户id</th>
+		<th>用户名</th>
+		<th>学号</th>
+		<th>性别</th>
+		<th>账户余额</th>
+		<th>修改</th>
+	</thead>
+	<?php foreach($lists as $list) : ?>
+	<tr>
+		<td>
+			<?php echo $list['user_id'];?>
+		</td>
+		<td>
+			<?php echo $list['user_name'];?>
+		</td>
+		<td>
+			<?php echo $list['user_number'];?>
+		</td>
+		<td>
+			<?php echo ($list['user_sex']==1 ? '男':'女');?>
+		</td>
+		<td>
+			<?php echo $list['user_balance'];?>
+		</td>
+		<td><a
+			href="<?php echo base_url().'index.php/admin/adminuser/resetPw/'.$list['user_id'];?>">重置密码</a></td>
+	</tr>
+	<?php endforeach;?>
+</table>
+</div>
+<div class="col-lg-2"></div>

@@ -1,0 +1,15 @@
+<?php
+/*¼ì²éÓÃ»§ÊÇ·ñµÇÂ½×´Ì¬¿ØÖÆÆ÷
+ * time:2016/10/12  author:¹þ¹þ¹þÃÛ¹Ï*/
+defined('BASEPATH') OR exit('No direct script access allowed');
+class Login_Controller extends CI_Controller{
+    public function __construct(){
+        parent::__construct();
+        //µÇÂ½ÑéÖ¤
+
+
+
+    }
+
+
+}

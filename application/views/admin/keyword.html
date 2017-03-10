@@ -1,0 +1,38 @@
+<div class="col-lg-2"></div>
+<div class="col-lg-8">
+<p>
+	<a href="<?php echo base_url().'index.php/admin/keyword/add';?>">添加关键词</a>
+</p>
+<table class="table">
+
+	<thead>
+		<th>关键词id</th>
+		<th>名称</th>
+		<th>Rangking</th>
+		<th>修改</th>
+	</thead>
+
+	<?php foreach($lists as $list) : ?>
+	<tr>
+		<td>
+			<?php echo $list['kw_id'];?>
+		</td>
+		<td>
+			<?php echo $list['kw_name'];?>
+		</td>
+		<td>
+			<?php echo $list['kw_ranking'];?>
+		</td>
+		<td><a
+			href="<?php echo base_url().'index.php/admin/keyword/edit/'.$list['kw_id'];?>">修改</a>/<a
+			href="<?php echo base_url().'index.php/admin/keyword/delete/'.$list['kw_id'];?>">删除</a></td>
+	</tr>
+	<?php endforeach; ?>
+	<tr>
+		<td>
+			<?php echo $page ?>
+		</td>
+	</tr>
+</table>
+</div>
+<div class="col-lg-2"></div>

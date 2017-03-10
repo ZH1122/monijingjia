@@ -1,0 +1,23 @@
+<table class="table">
+	<thead>
+		<th>单元id</th>
+		<th>创意id</th>
+		<th>创意名称</th>
+		<th>创意描述</th>
+		<th>URL</th>
+		<th>点击次数</th>
+		<th>是否展示</th>
+	</thead>
+	<?php foreach($lists as $list) : ?>
+	<tr>
+		<td><?php echo $list['unit_id'];?></td>
+		<td><?php echo $list['idea_id'];?></td>
+		<td><?php echo $list['idea_title'];?></td>
+		<td><?php echo $list['idea_describr'];?></td>
+		<td><?php echo $list['idea_url'];?></td>
+		<td><?php echo $list['idea_click'];?></td>
+		<td><?php echo $list['idea_show'];?></td>
+
+	</tr>
+	<?php endforeach;?>
+</table>
